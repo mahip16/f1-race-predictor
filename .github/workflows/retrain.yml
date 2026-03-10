@@ -1,0 +1,35 @@
+name: Retrain F1 Model
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # every Monday at 9am UTC
+  workflow_dispatch:       # allows manual trigger from GitHub UI
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install pandas numpy xgboost scikit-learn requests joblib
+
+      - name: Run retrain pipeline
+        run: |
+          python src/retrain.py
+
+      - name: Commit updated data and model
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add data/f1_data.csv data/f1_features.csv models/f1_model.pkl
+          git diff --staged --quiet || git commit -m "auto: retrain model after new race data"
+          git push
