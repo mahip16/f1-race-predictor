@@ -20,7 +20,7 @@ A machine learning web app that predicts Formula 1 race win probabilities using 
 | | Accuracy | Log Loss |
 |---|---|---|
 | Dumb baseline (always predict no win) | 95.0% | 0.199 |
-| XGBoost model | 97.7% | 0.066 |
+| XGBoost model | 95.6% | 0.088 |
 
 Accuracy alone is misleading here because only 5% of rows are wins, a model that always predicts nobody wins still gets 95% accuracy. Log loss is the more honest metric because it evaluates the quality of probability estimates, not just right or wrong predictions. The model's 0.066 vs the baseline's 0.199 means probability estimates are roughly 3x more accurate than guessing.
 
