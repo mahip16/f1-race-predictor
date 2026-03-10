@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 import plotly.express as px
+from src.monte_carlo import simulate_race
 
 st.set_page_config(
     page_title="F1 Race Predictor",
@@ -111,3 +112,22 @@ fig3 = px.bar(
     labels={"importance": "Importance Score", "feature": "Feature"}
 )
 st.plotly_chart(fig3, use_container_width=True)
+
+# monte carlo simulation
+st.subheader("🎲 Monte Carlo Simulation (10,000 races)")
+st.caption("Simulates the race 10,000 times with random DNFs, safety cars, and performance variation")
+
+with st.spinner("Running simulation..."):
+    mc_results = simulate_race(race_df, n_simulations=10000)
+    mc_results["monte_carlo_win_prob"] = mc_results["monte_carlo_win_prob"] * 100
+
+fig4 = px.bar(
+    mc_results.head(10),
+    x="monte_carlo_win_prob",
+    y="driver",
+    orientation="h",
+    title="Win Probability after 10,000 Simulated Races",
+    labels={"monte_carlo_win_prob": "Win Probability (%)", "driver": "Driver"}
+)
+fig4.update_layout(yaxis={"categoryorder": "total ascending"})
+st.plotly_chart(fig4, use_container_width=True)
