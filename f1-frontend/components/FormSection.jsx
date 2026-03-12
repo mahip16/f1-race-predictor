@@ -1,11 +1,11 @@
 import GlassPanel from "./GlassPanel"
-import { MOCK_RECENT_FORM, TEAM_COLORS } from "../src/mockData"
+import { MOCK_RECENT_FORM, TEAM_COLORS, teamKey } from "../src/mockData"
 import { useState, useEffect, useRef } from "react"
 
 function DriverCard({ entry }) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
-  const color = TEAM_COLORS[entry.team] || "#fff"
+  const color = TEAM_COLORS[teamKey(entry.team)] || "#fff"
   const formatName = (str) => str.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase())
   const avg = (entry.results.reduce((a, b) => a + b, 0) / entry.results.length).toFixed(1)
 
@@ -58,7 +58,8 @@ function DriverCard({ entry }) {
   )
 }
 
-export default function FormSection() {
+export default function FormSection({ form: formProp }) {
+  const entries = formProp?.form || MOCK_RECENT_FORM
   return (
     <GlassPanel>
        <div style={{ borderLeft: "3px solid #FF8000", paddingLeft: "12px", marginBottom: "28px" }}>

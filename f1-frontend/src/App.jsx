@@ -8,11 +8,16 @@ import { useState } from "react"
 import Sidebar from "../components/Sidebar"
 
 
-
 export default function App() {
     const [predictions, setPredictions] = useState(null)
     const [loading, setLoading] = useState(false)
     const [drawerOpen, setDrawerOpen] = useState(false)
+    const [form, setForm] = useState(null)
+
+    const handleResults = (data) => {
+      setPredictions(null)  
+      setTimeout(() => setPredictions(data), 50)  
+    }
 
   return (
     <div style={{ background: "#050508", minHeight: "100vh" }}>
@@ -61,13 +66,13 @@ export default function App() {
         ))}
       </button>
 
-      <Sidebar
-        onResults={setPredictions}
-        setLoading={setLoading}
-        isOpen={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
-      />
-
+      <Sidebar 
+        onResults={handleResults} 
+        setLoading={setLoading} 
+        isOpen={drawerOpen} 
+        onClose={() => setDrawerOpen(false)} 
+        onForm={setForm} />
+      
       <div style={{ position: "relative", 
                     zIndex: 1, padding: "40px", 
                     display: "flex", 
@@ -76,8 +81,8 @@ export default function App() {
                     opacity: loading ? 0 : 1, 
                     transition: "opacity 0.4s ease", }}>
         <Hero predictions={predictions}/>
-        <PredictionsSection predictions={predictions} />
-        <MonteCarloSection predictions={predictions} />
+        <PredictionsSection key={predictions?.circuit + predictions?.season} predictions={predictions} />
+        <MonteCarloSection key={"mc" + predictions?.circuit + predictions?.season} predictions={predictions} />
         <FormSection />
         <FeatureImportance />
       </div>

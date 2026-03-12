@@ -79,3 +79,30 @@ def predict_race(season: int, circuit: str):
 def feature_importance():
     importance = dict(zip(FEATURES, model.feature_importances_.tolist()))
     return {"importance": importance}
+
+@app.get("/form/{season}/{circuit}")
+def get_form(season: int, circuit: str):
+    race_df = df[(df["season"] == season) & (df["circuit"] == circuit)].copy()
+    
+    if race_df.empty:
+        return {"error": "Race not found"}
+    
+    form = []
+    for _, row in race_df.iterrows():
+        driver = row["driver"]
+        team = row["team"]
+        
+        # get all races before this one for this driver
+        driver_df = df[df["driver"] == driver].sort_values(["season", "round"])
+        before = driver_df[
+            (driver_df["season"] < season) |
+            ((driver_df["season"] == season) & (driver_df["round"] < row["round"]))
+        ]
+        
+        last5 = before.tail(5)["position"].tolist()
+        last5 = [int(p) for p in last5 if not pd.isna(p)]
+        
+        if last5:
+            form.append({"driver": driver, "team": team, "results": last5})
+    
+    return {"form": form}

@@ -9,7 +9,7 @@ const DRIVERS_2026 = [
   "albon", "colapinto", "bearman", "hadjar", "doohan"
 ]
 
-export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
+export default function Sidebar({ onResults, setLoading, isOpen, onClose, onForm }) {
   const [mode, setMode] = useState("historical")
   const [seasons, setSeasons] = useState([])
   const [season, setSeason] = useState(2025)
@@ -28,20 +28,25 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
     setSelectedCircuit(null)
   }, [season])
 
-  const handleSubmit = async () => {
-    console.log("mode: " + mode + " circuit: " + selectedCircuit + " season: " + season)
+    const handleSubmit = async () => {
     if (mode === "historical" && !selectedCircuit) return
     onClose()
-    window.scrollTo({ top: 0, behavior: "smooth" })
     setLoading(true)
     try {
       const data = await fetchPredictions(season, selectedCircuit)
+      console.log(data)
       onResults(data)
     } catch {
       onResults(MOCK_PREDICTIONS)
-    } finally {
-      setTimeout(() => setLoading(false), 400)
     }
+    try {
+      const formData = await fetchForm(season, selectedCircuit)
+      onForm(formData)
+    } catch {
+      console.log("form fetch failed")
+    }
+    window.scrollTo({ top: 0, behavior: "instant" })
+    setTimeout(() => setLoading(false), 400)
   }
 
   return (
