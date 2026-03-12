@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import PredictionsSection from "../components/PredictionsSection"
+import MonteCarloSection from "../components/MonteCarloSection"
+import FeatureImportance from "../components/FeatureImportance"
+import FormSection from "../components/FormSection"
+import Hero from "../components/Hero"
+import car from "./assets/car.webp"
+import { useState } from "react"
+import Sidebar from "../components/Sidebar"
 
-function App() {
-  const [count, setCount] = useState(0)
+
+
+export default function App() {
+  
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div style={{ background: "#050508", minHeight: "100vh" }}>
+  
+      <div style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        height: "100vh",
+        zIndex: 0,
+        pointerEvents: "none",
+        overflow: "hidden",
+      }}>
+        <img src={car} alt="" style={{
+          position: "absolute",
+          bottom: "-5%",
+          right: "-5%",
+          width: "85%",
+          opacity: 0.9,
+          maskImage: "linear-gradient(to left, rgba(0,0,0,0.8), transparent 90%)",
+          WebkitMaskImage: "linear-gradient(to left, rgba(0,0,0,0.8), transparent 90%)",
+        }} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div style={{ position: "relative", zIndex: 1, padding: "40px", display: "flex", flexDirection: "column", gap: "40px" }}>
+        <Hero />
+        <PredictionsSection />
+        <MonteCarloSection />
+        <FormSection />
+        <FeatureImportance />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+    </div>
   )
 }
-
-export default App
