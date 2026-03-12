@@ -10,7 +10,9 @@ import Sidebar from "../components/Sidebar"
 
 
 export default function App() {
-  
+    const [predictions, setPredictions] = useState(null)
+    const [loading, setLoading] = useState(false)
+    const [drawerOpen, setDrawerOpen] = useState(false)
 
   return (
     <div style={{ background: "#050508", minHeight: "100vh" }}>
@@ -36,14 +38,49 @@ export default function App() {
         }} />
       </div>
 
-      <div style={{ position: "relative", zIndex: 1, padding: "40px", display: "flex", flexDirection: "column", gap: "40px" }}>
+      <button onClick={() => setDrawerOpen(!drawerOpen)} style={{
+        position: "fixed",
+        top: "36px",
+        left: "36px",
+        zIndex: 100,
+        background: "none",
+        border: "none",
+        cursor: "pointer",
+        display: drawerOpen ? "none" : "flex",
+        flexDirection: "column",
+        gap: "5px",
+        padding: "8px",
+      }}>
+        {[0, 1, 2].map(i => (
+          <div key={i} style={{
+            width: "24px",
+            height: "2px",
+            background: "rgba(255,255,255,0.6)",
+            borderRadius: "2px",
+          }} />
+        ))}
+      </button>
+
+      <Sidebar
+        onResults={setPredictions}
+        setLoading={setLoading}
+        isOpen={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+      />
+
+      <div style={{ position: "relative", 
+                    zIndex: 1, padding: "40px", 
+                    display: "flex", 
+                    flexDirection: "column", 
+                    gap: "40px", 
+                    opacity: loading ? 0 : 1, 
+                    transition: "opacity 0.4s ease", }}>
         <Hero />
-        <PredictionsSection />
-        <MonteCarloSection />
+        <PredictionsSection predictions={predictions} />
+        <MonteCarloSection predictions={predictions} />
         <FormSection />
         <FeatureImportance />
       </div>
-
     </div>
   )
 }
