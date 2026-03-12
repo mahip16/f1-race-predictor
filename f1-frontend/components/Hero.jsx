@@ -1,4 +1,12 @@
-export default function Hero() {
+import { TEAM_COLORS, teamKey } from "../src/mockData"
+
+export default function Hero({ predictions }) {
+  const data = predictions?.predictions || []
+  const top = data[0]
+  const season = predictions?.season || 2025
+  const circuit = predictions?.circuit || "monaco"
+  const formatName = (str) => str?.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase())
+
   return (
     <div style={{
       height: "100vh",
@@ -53,7 +61,7 @@ export default function Hero() {
           textTransform: "uppercase",
           marginBottom: "16px",
         }}>
-          2025 Season — Monaco Grand Prix
+          {season} Season — {formatName(circuit)} Grand Prix
         </div>
 
         <h1 style={{
@@ -87,9 +95,9 @@ export default function Hero() {
               fontFamily: "'Barlow Condensed', sans-serif",
               fontSize: "22px",
               fontWeight: 700,
-              color: "#FF8000",
+              color: top ? (TEAM_COLORS[teamKey(top.team)] || "#fff") : "#fff",
             }}>
-              Norris — 31.0%
+              {formatName(top?.driver)} — {top ? (top.win_probability * 100).toFixed(1) : "—"}%
             </div>
           </div>
 
@@ -135,7 +143,7 @@ export default function Hero() {
               fontWeight: 700,
               color: "#fff",
             }}>
-              20
+              {data.length || 20}
             </div>
           </div>
         </div>

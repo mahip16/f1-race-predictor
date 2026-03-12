@@ -75,7 +75,7 @@ export default function App() {
                     gap: "40px", 
                     opacity: loading ? 0 : 1, 
                     transition: "opacity 0.4s ease", }}>
-        <Hero />
+        <Hero predictions={predictions}/>
         <PredictionsSection predictions={predictions} />
         <MonteCarloSection predictions={predictions} />
         <FormSection />

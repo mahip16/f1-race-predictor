@@ -1,9 +1,9 @@
 import GlassPanel from "./GlassPanel"
 import AnimatedBar from "./AnimatedBar"
-import { MOCK_PREDICTIONS, TEAM_COLORS } from "../src/mockData"
+import { MOCK_PREDICTIONS, TEAM_COLORS, teamKey } from "../src/mockData"
 
-export default function PredictionsSection() {
-  const { predictions } = MOCK_PREDICTIONS
+export default function PredictionsSection({ predictions: predictionsProp }) {
+  const { predictions } = predictionsProp || MOCK_PREDICTIONS
   const maxValue = Math.max(...predictions.map(d => d.win_probability))
   const formatName = (str) => str.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase())
 
@@ -20,7 +20,7 @@ export default function PredictionsSection() {
             key={driver.driver}
             value={driver.win_probability}
             maxValue={maxValue}
-            color={TEAM_COLORS[driver.team]}
+            color={TEAM_COLORS[teamKey(driver.team)] || "#fff"}
             delay={index * 0.06}
             label={formatName(driver.driver)}
             sublabel={`P${driver.grid} · ${formatName(driver.team)}`}

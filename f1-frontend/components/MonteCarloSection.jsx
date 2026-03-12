@@ -1,9 +1,9 @@
 import GlassPanel from "./GlassPanel"
 import AnimatedBar from "./AnimatedBar"
-import { MOCK_PREDICTIONS, TEAM_COLORS } from "../src/mockData"
+import { MOCK_PREDICTIONS, TEAM_COLORS, teamKey } from "../src/mockData"
 
-export default function MonteCarloSection() {
-  const { predictions } = MOCK_PREDICTIONS
+export default function MonteCarloSection({ predictions: predictionsProp }) {
+  const { predictions } = predictionsProp || MOCK_PREDICTIONS
   const maxValue = Math.max(...predictions.map(d => d.mc_probability))
   const formatName = (str) => str.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase())
 
@@ -23,7 +23,7 @@ export default function MonteCarloSection() {
               key={driver.driver}
               value={driver.mc_probability}
               maxValue={maxValue}
-              color={TEAM_COLORS[driver.team]}
+              color={TEAM_COLORS[teamKey(driver.team)] || "#fff"}
               delay={index * 0.06}
               label={formatName(driver.driver)}
               sublabel={`MC vs Model: ${sign}${delta}%`}

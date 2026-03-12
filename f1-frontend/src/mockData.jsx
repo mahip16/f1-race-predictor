@@ -11,7 +11,28 @@ export const TEAM_COLORS = {
   kick_sauber: "#52E252",
   cadillac: "#4d4d4d",
   audi: "#BB0000",
+
+  alfa_romeo: "#B12335",
+  alphatauri: "#5E8FAA",
+  alpha_tauri: "#5E8FAA",
+  renault: "#FFF500",
+  racing_point: "#F596C8",
+  force_india: "#F596C8",
+  toro_rosso: "#469BFF",
+  lotus: "#FFB800",
+  manor: "#6E0000",
+  sauber: "#006EFF",
+  caterham: "#005030",
+  marussia: "#6E0000",
+  jordan: "#FFD700",
+
 };
+
+export const teamKey = (team) =>
+  team?.toLowerCase()
+    .replace(/ f1 team| racing| motorsport/g, "")
+    .replace(/ /g, "_")
+    .trim()
 
 export const MOCK_PREDICTIONS = {
   season: 2025,

@@ -29,8 +29,10 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
   }, [season])
 
   const handleSubmit = async () => {
+    console.log("mode: " + mode + " circuit: " + selectedCircuit + " season: " + season)
     if (mode === "historical" && !selectedCircuit) return
     onClose()
+    window.scrollTo({ top: 0, behavior: "smooth" })
     setLoading(true)
     try {
       const data = await fetchPredictions(season, selectedCircuit)
