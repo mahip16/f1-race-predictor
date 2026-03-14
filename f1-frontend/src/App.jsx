@@ -1,18 +1,17 @@
 import PredictionsSection from "../components/PredictionsSection"
 import MonteCarloSection from "../components/MonteCarloSection"
 import FeatureImportance from "../components/FeatureImportance"
-import FormSection from "../components/FormSection"
 import Hero from "../components/Hero"
 import car from "./assets/car.webp"
 import { useState } from "react"
 import Sidebar from "../components/Sidebar"
+import ModelFeaturesSection from "../components/ModelFeaturesSection"
 
 
 export default function App() {
     const [predictions, setPredictions] = useState(null)
     const [loading, setLoading] = useState(false)
     const [drawerOpen, setDrawerOpen] = useState(false)
-    const [form, setForm] = useState(null)
 
     const handleResults = (data) => {
       setPredictions(null)  
@@ -37,7 +36,7 @@ export default function App() {
           bottom: "-5%",
           right: "-5%",
           width: "85%",
-          opacity: 0.9,
+          opacity: 1,
           maskImage: "linear-gradient(to left, rgba(0,0,0,0.8), transparent 90%)",
           WebkitMaskImage: "linear-gradient(to left, rgba(0,0,0,0.8), transparent 90%)",
         }} />
@@ -70,8 +69,8 @@ export default function App() {
         onResults={handleResults} 
         setLoading={setLoading} 
         isOpen={drawerOpen} 
-        onClose={() => setDrawerOpen(false)} 
-        onForm={setForm} />
+        onClose={() => setDrawerOpen(false)}
+       />
       
       <div style={{ position: "relative", 
                     zIndex: 1, padding: "40px", 
@@ -83,7 +82,7 @@ export default function App() {
         <Hero predictions={predictions}/>
         <PredictionsSection key={predictions?.circuit + predictions?.season} predictions={predictions} />
         <MonteCarloSection key={"mc" + predictions?.circuit + predictions?.season} predictions={predictions} />
-        <FormSection />
+        <ModelFeaturesSection key={"features" + predictions?.circuit + predictions?.season} predictions={predictions} />
         <FeatureImportance />
       </div>
     </div>

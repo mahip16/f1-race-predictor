@@ -67,10 +67,13 @@ def predict_race(season: int, circuit: str):
     mc_results = simulate_race(race_df, n_simulations=10000)
     mc_results = mc_results.rename(columns={"monte_carlo_win_prob": "mc_probability"})
     
-    # merge
-    result = race_df[["driver", "team", "grid", "win_probability"]].merge(
-        mc_results, on="driver", how="left"
+    # Select columns without duplicates and merge
+    result = race_df[["driver", "team", "grid", "win_probability"] + FEATURES].merge(
+        mc_results[["driver", "mc_probability"]], on="driver", how="left"
     )
+    
+    # Replace NaN values with None (which becomes null in JSON)
+    result = result.replace({np.nan: None})
     
     return {"season": season, "circuit": circuit, "predictions": result.to_dict(orient="records")}
 

@@ -9,7 +9,7 @@ export default function Hero({ predictions }) {
 
   return (
     <div style={{
-      height: "100vh",
+      height: "70vh",
       display: "flex",
       flexDirection: "column",
       justifyContent: "flex-end",
@@ -75,7 +75,7 @@ export default function Hero({ predictions }) {
           textTransform: "uppercase",
         }}>
           Win<br />
-          <span style={{ color: "rgba(255,255,255,0.15)" }}>Predictions</span>
+          <span style={{ color: "rgba(255, 255, 255, 0.39)" }}>Predictions</span>
         </h1>
 
         {/* stat strip */}
@@ -84,7 +84,7 @@ export default function Hero({ predictions }) {
             <div style={{
               fontFamily: "'DM Mono', monospace",
               fontSize: "10px",
-              color: "rgba(255,255,255,0.3)",
+              color: "rgba(255, 255, 255, 0.39)",
               letterSpacing: "0.2em",
               textTransform: "uppercase",
               marginBottom: "4px",
@@ -107,7 +107,7 @@ export default function Hero({ predictions }) {
             <div style={{
               fontFamily: "'DM Mono', monospace",
               fontSize: "10px",
-              color: "rgba(255,255,255,0.3)",
+              color: "rgba(255, 255, 255, 0.39)",
               letterSpacing: "0.2em",
               textTransform: "uppercase",
               marginBottom: "4px",
@@ -130,7 +130,7 @@ export default function Hero({ predictions }) {
             <div style={{
               fontFamily: "'DM Mono', monospace",
               fontSize: "10px",
-              color: "rgba(255,255,255,0.3)",
+              color: "rgba(255, 255, 255, 0.39)",
               letterSpacing: "0.2em",
               textTransform: "uppercase",
               marginBottom: "4px",
@@ -162,7 +162,7 @@ export default function Hero({ predictions }) {
         <div style={{
           fontFamily: "'DM Mono', monospace",
           fontSize: "9px",
-          color: "rgba(255,255,255,0.2)",
+          color: "rgba(255, 255, 255, 0.39)",
           letterSpacing: "0.3em",
           textTransform: "uppercase",
           writingMode: "vertical-rl",
@@ -172,7 +172,7 @@ export default function Hero({ predictions }) {
         <div style={{
           width: "1px",
           height: "60px",
-          background: "linear-gradient(to bottom, rgba(255,255,255,0.2), transparent)",
+          background: "linear-gradient(to bottom, rgba(255, 255, 255, 0.39), transparent)",
         }} />
       </div>
 

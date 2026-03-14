@@ -59,7 +59,8 @@ function DriverCard({ entry }) {
 }
 
 export default function FormSection({ form: formProp }) {
-  const entries = formProp?.form || MOCK_RECENT_FORM
+    console.log("form prop:", formProp)
+    const entries = formProp?.form || MOCK_RECENT_FORM
   return (
     <GlassPanel>
        <div style={{ borderLeft: "3px solid #FF8000", paddingLeft: "12px", marginBottom: "28px" }}>
@@ -68,7 +69,7 @@ export default function FormSection({ form: formProp }) {
         </span>
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "24px" }}>
-        {MOCK_RECENT_FORM.map((entry) => (
+        {entries.map((entry) => (
           <DriverCard key={entry.driver} entry={entry} />
         ))}
       </div>

@@ -9,7 +9,7 @@ const DRIVERS_2026 = [
   "albon", "colapinto", "bearman", "hadjar", "doohan"
 ]
 
-export default function Sidebar({ onResults, setLoading, isOpen, onClose, onForm }) {
+export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
   const [mode, setMode] = useState("historical")
   const [seasons, setSeasons] = useState([])
   const [season, setSeason] = useState(2025)
@@ -38,12 +38,6 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose, onForm
       onResults(data)
     } catch {
       onResults(MOCK_PREDICTIONS)
-    }
-    try {
-      const formData = await fetchForm(season, selectedCircuit)
-      onForm(formData)
-    } catch {
-      console.log("form fetch failed")
     }
     window.scrollTo({ top: 0, behavior: "instant" })
     setTimeout(() => setLoading(false), 400)
