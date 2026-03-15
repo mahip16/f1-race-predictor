@@ -36,7 +36,7 @@ export default function App() {
           bottom: "-5%",
           right: "-5%",
           width: "85%",
-          opacity: 1,
+          opacity: 0.9,
           maskImage: "linear-gradient(to left, rgba(0,0,0,0.8), transparent 90%)",
           WebkitMaskImage: "linear-gradient(to left, rgba(0,0,0,0.8), transparent 90%)",
         }} />

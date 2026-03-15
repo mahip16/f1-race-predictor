@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react"
-import { fetchSeasons, fetchRaces, fetchPredictions } from "../src/api"
+import { fetchSeasons, fetchRaces, fetchPredictions, fetch2026Predictions } from "../src/api"
 import { MOCK_PREDICTIONS } from "../src/mockData"
 
 const DRIVERS_2026 = [
-  "norris", "piastri", "leclerc", "hamilton", "russell",
-  "antonelli", "max_verstappen", "lawson", "alonso", "stroll",
-  "ocon", "gasly", "hulkenberg", "bortoleto", "sainz",
-  "albon", "colapinto", "bearman", "hadjar", "doohan"
+  "russell", "antonelli", "leclerc", "hamilton", "norris",
+  "piastri", "max_verstappen", "hadjar", "ocon", "bearman",
+  "lawson", "lindblad", "hulkenberg", "bortoleto", "gasly", "colapinto",
+  "sainz", "albon", "perez", "bottas", "alonso", "stroll"
 ]
 
 export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
@@ -16,6 +16,16 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
   const [races, setRaces] = useState([])
   const [selectedCircuit, setSelectedCircuit] = useState(null)
   const [grid, setGrid] = useState(Array(20).fill(""))
+  const [selected2026Circuit, setSelected2026Circuit] = useState(null)
+
+  const CIRCUITS_2026 = [
+    "albert_park", "shanghai", "suzuka", "bahrain", "jeddah",
+    "miami", "villeneuve", "monaco", "catalunya", "red_bull_ring",
+    "silverstone", "spa", "hungaroring", "zandvoort", "monza",
+    "baku", "marina_bay", "americas", "rodriguez", "interlagos",
+    "vegas", "losail", "yas_marina"
+  ]
+
 
   // fetch seasons on mount
   useEffect(() => {
@@ -28,13 +38,21 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
     setSelectedCircuit(null)
   }, [season])
 
-    const handleSubmit = async () => {
+  const handleSubmit = async () => {
     if (mode === "historical" && !selectedCircuit) return
+    if (mode === "2026" && !selected2026Circuit) return
     onClose()
     setLoading(true)
     try {
-      const data = await fetchPredictions(season, selectedCircuit)
-      console.log(data)
+      let data
+      if (mode === "historical") {
+        data = await fetchPredictions(season, selectedCircuit)
+      } else {
+        const filledGrid = grid.filter(d => d !== "")
+        data = await fetch2026Predictions(selected2026Circuit, filledGrid)
+        console.log("2026 data:", data)
+        console.log("grid sent:", filledGrid)
+      }
       onResults(data)
     } catch {
       onResults(MOCK_PREDICTIONS)
@@ -42,6 +60,7 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
     window.scrollTo({ top: 0, behavior: "instant" })
     setTimeout(() => setLoading(false), 400)
   }
+
 
   return (
     <>
@@ -182,6 +201,28 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
 
       {mode === "2026" && (
         <div style={{ flex: 1 }}>
+          <Label>Circuit</Label>
+          <div style={{ display: "flex", flexDirection: "column", gap: "4px", marginTop: "8px", marginBottom: "20px" }}>
+            {CIRCUITS_2026.map(circuit => (
+              <button key={circuit} onClick={() => setSelected2026Circuit(circuit)} style={{
+                padding: "10px 12px",
+                background: selected2026Circuit === circuit ? "rgba(232,0,45,0.15)" : "transparent",
+                border: "1px solid",
+                borderColor: selected2026Circuit === circuit ? "#E8002D" : "rgba(255,255,255,0.06)",
+                borderRadius: "8px",
+                color: selected2026Circuit === circuit ? "#fff" : "rgba(255,255,255,0.4)",
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: "13px",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                textAlign: "left",
+                cursor: "pointer",
+                transition: "all 0.15s ease",
+              }}>
+                {circuit.replace(/_/g, " ")}
+              </button>
+            ))}
+          </div>
           <Label>Qualifying Order</Label>
           <div style={{ display: "flex", flexDirection: "column", gap: "6px", marginTop: "8px" }}>
             {grid.map((val, i) => (
@@ -216,7 +257,12 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
                 >
                   <option value="" style={{ background: "#0a0a0f" }}>— Driver —</option>
                   {DRIVERS_2026.map(d => (
-                    <option key={d} value={d} style={{ background: "#0a0a0f" }}>
+                    <option
+                      key={d}
+                      value={d}
+                      disabled={grid.includes(d) && grid[i] !== d}
+                      style={{ background: "#0a0a0f", color: grid.includes(d) && grid[i] !== d ? "rgba(255,255,255,0.2)" : "#fff" }}
+                    >
                       {d.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase())}
                     </option>
                   ))}

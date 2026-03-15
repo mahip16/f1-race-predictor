@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import joblib
 from src.monte_carlo import simulate_race
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -109,3 +110,55 @@ def get_form(season: int, circuit: str):
             form.append({"driver": driver, "team": team, "results": last5})
     
     return {"form": form}
+
+class Grid2026(BaseModel):
+    grid: list[str]
+ 
+ 
+@app.post("/predict2026/{circuit}")
+def predict_2026(circuit: str, body: Grid2026):
+    rows = []
+    for i, driver in enumerate(body.grid):
+        driver_data = latest_features[latest_features["driver"] == driver]
+        if len(driver_data) == 0:
+            # use league averages for unknown drivers
+            d = latest_features.mean(numeric_only=True)
+            d["team"] = "racing_bulls"
+        else:
+            d = driver_data.iloc[0]
+ 
+        circuit_history = df[(df["driver"] == driver) & (df["circuit"] == circuit)]
+        circuit_win_rate = float(circuit_history["won"].mean()) if len(circuit_history) > 0 else 0.0
+ 
+        rows.append({
+            "driver": driver,
+            "team": d["team"],
+            "grid": i + 1,
+            "driver_avg_finish_last3": d["driver_avg_finish_last3"],  # career form still valid
+            "driver_circuit_win_rate": circuit_win_rate,
+            "team_avg_points_last3": 0,       # season resets to 0
+            "driver_dnf_rate": d["driver_dnf_rate"],  # career reliability still valid
+            "regulation_era": 3,
+            "driver_championship_pos": i + 1,  # assume quali order = rough champ standing
+            "home_race": 0,
+            "gap_to_leader": 0,               # season resets to 0
+        })
+ 
+    if not rows:
+        return {"error": "No valid drivers provided"}
+ 
+    pred_df = pd.DataFrame(rows)
+    X = pred_df[FEATURES].fillna(0)
+    pred_df["win_probability"] = model.predict_proba(X)[:, 1]
+    pred_df["win_probability"] = pred_df["win_probability"] / pred_df["win_probability"].sum()
+    pred_df = pred_df.sort_values("win_probability", ascending=False)
+ 
+    mc_results = simulate_race(pred_df, n_simulations=10000)
+    mc_results = mc_results.rename(columns={"monte_carlo_win_prob": "mc_probability"})
+ 
+    result = pred_df[["driver", "team", "grid", "win_probability"] + FEATURES].merge(
+        mc_results[["driver", "mc_probability"]], on="driver", how="left"
+    )
+    result = result.replace({np.nan: None})
+ 
+    return {"season": 2026, "circuit": circuit, "predictions": result.to_dict(orient="records")}

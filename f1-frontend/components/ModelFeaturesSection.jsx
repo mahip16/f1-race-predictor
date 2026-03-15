@@ -24,15 +24,15 @@ function FeatureCard({ driver, team, feature, value, percentage, color, delay, r
     onMouseEnter={() => setHovered(true)}
     onMouseLeave={() => setHovered(false)}
     style={{
-      background: hovered ? `rgba(15,15,20,0.95)` : "rgba(10,10,15,0.85)",
+      background:  "rgba(10,10,15,0.85)",
       border: `1px solid ${hovered ? color + "66" : color + "22"}`,
       borderRadius: "10px",
       padding: "16px",
       position: "relative",
       minWidth: "220px",
       transform: hovered ? "scale(1.02) translateY(-5px)" : "scale(1)",
-      transition: "transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease",
-      boxShadow: hovered ? `0 0 20px ${color}33` : "none",
+      transition: "transform 0.08s ease-out, border-color 0.08s ease-out, box-shadow 0.08s ease-out",
+      boxShadow: `0 0 20px ${color}22`,
       cursor: "default",
     }}>
       {/* Rank badge */}
@@ -104,12 +104,14 @@ export default function ModelFeaturesSection({ predictions }) {
   const topDrivers = data.slice(0, 6) // Show top 6 drivers
 
   // Feature display configurations with importance weights
+  const is2026 = predictions?.season === 2026
   const features = [
-    { key: "grid", label: "Grid Position", inverse: true, importance: 34 }, 
+    { key: "grid", label: "Grid Position", inverse: true, importance: 34 },
     { key: "driver_avg_finish_last3", label: "Avg Finish (Last 3)", inverse: true, importance: 21 },
     { key: "driver_circuit_win_rate", label: "Circuit Win Rate (%)", inverse: false, importance: 15, asPercent: true },
-    { key: "team_avg_points_last3", label: "Team Pts (Last 3)", inverse: false, importance: 12 },
+    ...(!is2026 ? [{ key: "team_avg_points_last3", label: "Team Pts (Last 3)", inverse: false, importance: 12 }] : []),
   ]
+
 
   if (!predictions || topDrivers.length === 0) {
     return null
