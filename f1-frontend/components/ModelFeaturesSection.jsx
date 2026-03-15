@@ -7,6 +7,8 @@ function FeatureCard({ driver, team, feature, value, percentage, color, delay, r
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
   const formatName = (str) => str.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase())
+  const barWidth = visible ? `${Math.max(percentage, 4)}%` : "0%"
+  const [hovered, setHovered] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -18,13 +20,20 @@ function FeatureCard({ driver, team, feature, value, percentage, color, delay, r
   }, [])
 
   return (
-    <div ref={ref} style={{
-      background: "rgba(255,255,255,0.03)",
-      border: `1px solid ${color}22`,
+  <div ref={ref}
+    onMouseEnter={() => setHovered(true)}
+    onMouseLeave={() => setHovered(false)}
+    style={{
+      background: hovered ? `rgba(15,15,20,0.95)` : "rgba(10,10,15,0.85)",
+      border: `1px solid ${hovered ? color + "66" : color + "22"}`,
       borderRadius: "10px",
       padding: "16px",
-      minWidth: "200px",
       position: "relative",
+      minWidth: "220px",
+      transform: hovered ? "scale(1.02) translateY(-5px)" : "scale(1)",
+      transition: "transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease",
+      boxShadow: hovered ? `0 0 20px ${color}33` : "none",
+      cursor: "default",
     }}>
       {/* Rank badge */}
       {rank <= 3 && (
@@ -48,7 +57,7 @@ function FeatureCard({ driver, team, feature, value, percentage, color, delay, r
       )}
 
       <div style={{ marginBottom: "12px" }}>
-        <div style={{ color, fontWeight: 700, fontSize: "13px", marginBottom: "4px" }}>
+        <div style={{ color, fontWeight: 700, fontSize: "13px", marginBottom: "4px", paddingRight: rank <= 3 ? "28px" : "0" }}>
           {formatName(driver)}
         </div>
         <div style={{ color: "rgba(255,255,255,0.3)", fontSize: "10px" }}>
@@ -78,10 +87,11 @@ function FeatureCard({ driver, team, feature, value, percentage, color, delay, r
       }}>
         <div style={{
           height: "100%",
-          width: visible ? `${percentage}%` : "0%",
-          background: color,
+          width: barWidth,
+          background: `linear-gradient(90deg, ${color}99, ${color})`,
           borderRadius: "2px",
-          transition: `width 1s ease ${delay}s`,
+          transition: `width 1s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s`,
+          boxShadow: `0 0 6px ${color}66`,
         }} />
       </div>
     </div>
@@ -106,7 +116,7 @@ export default function ModelFeaturesSection({ predictions }) {
   }
 
   return (
-    <GlassPanel>
+    <div>
       <div style={{ borderLeft: "3px solid #27F4D2", paddingLeft: "12px", marginBottom: "12px" }}>
         <span style={{ 
           fontFamily: "'Barlow Condensed', sans-serif", 
@@ -133,7 +143,7 @@ export default function ModelFeaturesSection({ predictions }) {
       {features.map((feature, featureIdx) => {
         // Get all values for this feature
         const values = topDrivers.map(d => {
-          let val = d[feature.key] || 0
+          let val = d[feature.key] ?? 0
           if (feature.asPercent) val = val * 100 // Convert to percentage
           return val
         })
@@ -149,13 +159,21 @@ export default function ModelFeaturesSection({ predictions }) {
           .sort((a, b) => feature.inverse ? a.value - b.value : b.value - a.value)
 
         return (
-          <div key={feature.key} style={{ marginBottom: "32px" }}>
-            <div style={{ 
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              marginBottom: "16px",
+          <div key={feature.key} style={{ 
+              marginBottom: "32px",
+              background: "rgba(10,10,15,0.6)",
+              backdropFilter: "blur(22px)",
+              border: "1px solid rgba(255,255,255,0.06)",
+              borderRadius: "16px",
+              padding: "24px",
+              boxShadow: "0 8px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.06)",
             }}>
+              <div style={{ 
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginBottom: "16px",
+              }}>
               <div style={{ 
                 color: "rgba(255,255,255,0.5)", 
                 fontSize: "12px",
@@ -174,15 +192,23 @@ export default function ModelFeaturesSection({ predictions }) {
               </div>
             </div>
 
+            <div style = {{ paddingTop: "20px", marginTop: "-20px", paddingBottom: "20px", marginBottom: "-20px" }}>
             <div className="feature-row" style={{ 
                 display: "flex",
-                gap: "16px",
+                gap: "12px",
                 overflowX: "auto",
-                paddingBottom: "8px"
+                paddingTop: "16px",
+                paddingBottom: "16px",
+                paddingLeft: "4px",
+                paddingRight: "4px",
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+                scrollBehavior: "smooth",
+                WebkitOverflowScrolling: "touch",
             }}>
               {topDrivers.map((driver, idx) => {
                 const color = TEAM_COLORS[teamKey(driver.team)] || "#fff"
-                let value = driver[feature.key] || 0
+                let value = driver[feature.key] ?? 0
                 if (feature.asPercent) value = value * 100
                 
                 // Calculate bar percentage (0-100)
@@ -214,6 +240,7 @@ export default function ModelFeaturesSection({ predictions }) {
               })}
             </div>
           </div>
+         </div>
         )
       })}
 
@@ -240,6 +267,6 @@ export default function ModelFeaturesSection({ predictions }) {
           that specific feature. Gold/silver/bronze badges mark top 3 performers per feature.
         </div>
       </div>
-    </GlassPanel>
+    </div>
   )
 }
