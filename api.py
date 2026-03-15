@@ -40,7 +40,7 @@ def root():
     return {"status": "F1 Predictor API is running"}
 
 
-@app.get("/seasons")
+@app.api_route("/seasons", methods=["GET", "HEAD"])
 def get_seasons():
     seasons = sorted(df["season"].unique().tolist(), reverse=True)
     return {"seasons": seasons}
