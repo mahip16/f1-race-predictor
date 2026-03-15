@@ -36,8 +36,8 @@ export default function Hero({ predictions }) {
           F1 Race Predictor
         </span>
         <div style={{ display: "flex", gap: "32px" }}>
-          {["Predictions", "Monte Carlo", "Form", "Features"].map(item => (
-            <a key={item} href={`#${item.toLowerCase().replace(" ", "-")}`} style={{
+          {["Predictions", "Monte Carlo", "Model Features", "Features"].map(item => (
+            <a key={item} href={`#${item.toLowerCase().replace(/ /g, "-")}`} style={{
               color: "rgba(255,255,255,0.35)",
               fontFamily: "'Barlow Condensed', sans-serif",
               fontSize: "12px",

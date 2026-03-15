@@ -58,7 +58,7 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
       onResults(MOCK_PREDICTIONS)
     }
     window.scrollTo({ top: 0, behavior: "instant" })
-    setTimeout(() => setLoading(false), 400)
+    setTimeout(() => setLoading(false), 2000)
   }
 
 
