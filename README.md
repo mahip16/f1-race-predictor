@@ -1,5 +1,5 @@
 # 🏎️ F1 Race Win Predictor
-![Demo](![Demo](f1-frontend/src/assets/f1.gif)
+![Demo](f1-frontend/src/assets/f1.gif)
 
 A machine learning web app that predicts Formula 1 race win probabilities using 15 years of historical data (2010–2025). Select any race, see predicted win probabilities per driver, and watch 10,000 simulated races play out.
 
