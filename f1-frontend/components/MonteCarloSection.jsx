@@ -25,7 +25,7 @@ export default function MonteCarloSection({ predictions: predictionsProp }) {
               maxValue={maxValue}
               color={TEAM_COLORS[teamKey(driver.team)] || "#fff"}
               delay={index * 0.06}
-              label={formatName(driver.driver)}
+              label={formatName(driver.driver).split(" ").slice(-1)[0]}
               sublabel={`MC vs Model: ${sign}${delta}%`}
               rightLabel={(driver.mc_probability * 100).toFixed(1) + "%"}
             />

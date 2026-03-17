@@ -97,7 +97,7 @@ export default function Hero({ predictions }) {
               fontWeight: 700,
               color: top ? (TEAM_COLORS[teamKey(top.team)] || "#fff") : "#fff",
             }}>
-              {formatName(top?.driver)} — {top ? (top.win_probability * 100).toFixed(1) : "—"}%
+              {top ? formatName(top.driver).split(" ").slice(-1)[0] : "—"} — {top ? (top.win_probability * 100).toFixed(1) : "—"}%
             </div>
           </div>
 

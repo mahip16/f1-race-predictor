@@ -22,7 +22,7 @@ export default function PredictionsSection({ predictions: predictionsProp }) {
             maxValue={maxValue}
             color={TEAM_COLORS[teamKey(driver.team)] || "#fff"}
             delay={index * 0.06}
-            label={formatName(driver.driver)}
+            label={formatName(driver.driver).split(" ").slice(-1)[0]}
             sublabel={`P${driver.grid} · ${formatName(driver.team)}`}
             rightLabel={(driver.win_probability * 100).toFixed(1) + "%"}
           />

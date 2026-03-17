@@ -17,6 +17,7 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
   const [selectedCircuit, setSelectedCircuit] = useState(null)
   const [grid, setGrid] = useState(Array(20).fill(""))
   const [selected2026Circuit, setSelected2026Circuit] = useState(null)
+  const [error, setError] = useState("")
 
   const CIRCUITS_2026 = [
     "albert_park", "shanghai", "suzuka", "bahrain", "jeddah",
@@ -41,6 +42,10 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
   const handleSubmit = async () => {
     if (mode === "historical" && !selectedCircuit) return
     if (mode === "2026" && !selected2026Circuit) return
+    if (mode === "2026" && grid.filter(d => d !== "").length < 5) {
+        setError("Select at least 5 qualifying positions")
+        return
+     }
     onClose()
     setLoading(true)
     try {
@@ -85,7 +90,7 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
         padding: "36px 20px 24px",
         display: "flex",
         flexDirection: "column",
-        gap: "28px",
+        gap: "12px",
         overflow: "hidden",
         transform: isOpen ? "translateX(0)" : "translateX(-100%)",
         transition: "transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -242,6 +247,7 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
                     const updated = [...grid]
                     updated[i] = e.target.value
                     setGrid(updated)
+                    setError("")
                   }}
                   style={{
                     flex: 1,
@@ -273,6 +279,21 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
         </div>
       )}
       </div>
+
+      {error && (
+        <div style={{
+          padding: "10px 12px",
+          background: "rgba(232,0,45,0.15)",
+          border: "1px solid #E8002D",
+          borderRadius: "8px",
+          color: "#E8002D",
+          fontFamily: "'DM Mono', monospace",
+          fontSize: "11px",
+          letterSpacing: "0.05em",
+        }}>
+          {error}
+        </div>
+      )}
 
      {/* predict button — always visible at bottom */}
         <button onClick={handleSubmit} style={{
