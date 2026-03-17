@@ -15,7 +15,7 @@ export default function Sidebar({ onResults, setLoading, isOpen, onClose }) {
   const [season, setSeason] = useState(2025)
   const [races, setRaces] = useState([])
   const [selectedCircuit, setSelectedCircuit] = useState(null)
-  const [grid, setGrid] = useState(Array(20).fill(""))
+  const [grid, setGrid] = useState(Array(22).fill(""))
   const [selected2026Circuit, setSelected2026Circuit] = useState(null)
   const [error, setError] = useState("")
 
