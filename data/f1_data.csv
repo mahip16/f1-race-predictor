@@ -6958,3 +6958,25 @@ season,round,race_name,circuit,driver,team,grid,position,points,status
 2026,2,,shanghai,norris,mclaren,6,20,0.0,Did not start
 2026,2,,shanghai,bortoleto,audi,16,21,0.0,Did not start
 2026,2,,shanghai,albon,williams,22,22,0.0,Did not start
+2026,3,,suzuka,antonelli,mercedes,1,1,25.0,Finished
+2026,3,,suzuka,piastri,mclaren,3,2,18.0,Finished
+2026,3,,suzuka,leclerc,ferrari,4,3,15.0,Finished
+2026,3,,suzuka,russell,mercedes,2,4,12.0,Finished
+2026,3,,suzuka,norris,mclaren,5,5,10.0,Finished
+2026,3,,suzuka,hamilton,ferrari,6,6,8.0,Finished
+2026,3,,suzuka,gasly,alpine,7,7,6.0,Finished
+2026,3,,suzuka,max_verstappen,red_bull,11,8,4.0,Finished
+2026,3,,suzuka,lawson,rb,14,9,2.0,Finished
+2026,3,,suzuka,ocon,haas,12,10,1.0,Finished
+2026,3,,suzuka,hulkenberg,audi,13,11,0.0,Finished
+2026,3,,suzuka,hadjar,red_bull,8,12,0.0,Finished
+2026,3,,suzuka,bortoleto,audi,9,13,0.0,Finished
+2026,3,,suzuka,arvid_lindblad,rb,10,14,0.0,Finished
+2026,3,,suzuka,sainz,williams,16,15,0.0,Finished
+2026,3,,suzuka,colapinto,alpine,15,16,0.0,Finished
+2026,3,,suzuka,perez,cadillac,19,17,0.0,Finished
+2026,3,,suzuka,alonso,aston_martin,21,18,0.0,Lapped
+2026,3,,suzuka,bottas,cadillac,20,19,0.0,Lapped
+2026,3,,suzuka,albon,williams,17,20,0.0,Lapped
+2026,3,,suzuka,stroll,aston_martin,22,21,0.0,Retired
+2026,3,,suzuka,bearman,haas,18,22,0.0,Retired

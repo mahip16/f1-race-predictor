@@ -131,6 +131,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,albon,Williams,17,16.0,0.0,Finished,0,0,12.666666666666666,0.0,0.1796875,8.333333333333334,70.0,8.0,309.0,2,0
 2026,1,,albert_park,albon,williams,15,12.0,0.0,Lapped,0,0,14.333333333333334,0.0,0.17829457364341086,,0.0,8.0,324.0,3,0
 2026,2,,shanghai,albon,williams,22,22.0,0.0,Did not start,0,1,13.0,0.0,0.17692307692307693,0.0,0.0,11.0,25.0,3,0
+2026,3,,suzuka,albon,williams,17,20.0,0.0,Lapped,0,0,16.666666666666668,0.0,0.183206106870229,1.0,0.0,15.0,43.0,3,0
 2010,1,Bahrain Grand Prix,bahrain,alguersuari,Toro Rosso,18,13.0,0.0,Finished,0,0,,,,,0.0,,,0,0
 2010,2,Australian Grand Prix,albert_park,alguersuari,Toro Rosso,17,11.0,0.0,Finished,0,0,13.0,,0.0,0.0,0.0,11.0,25.0,0,0
 2010,3,Malaysian Grand Prix,sepang,alguersuari,Toro Rosso,14,9.0,2.0,Finished,0,0,12.0,,0.0,0.0,2.0,12.0,37.0,0,0
@@ -459,6 +460,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,alonso,Aston Martin,6,6.0,8.0,Finished,0,0,10.666666666666666,0.0,0.1916376306620209,2.0,51.0,12.0,336.0,2,0
 2026,1,,albert_park,alonso,aston_martin,17,18.0,0.0,Retired,0,1,8.0,0.0,0.1909722222222222,,0.0,10.0,343.0,3,0
 2026,2,,shanghai,alonso,aston_martin,18,17.0,0.0,Retired,0,1,10.333333333333334,0.09090909090909091,0.19377162629757785,0.0,0.0,11.0,25.0,3,0
+2026,3,,suzuka,alonso,aston_martin,21,18.0,0.0,Lapped,0,0,13.666666666666666,0.0,0.19655172413793104,0.0,0.0,15.0,43.0,3,0
 2011,1,Australian Grand Prix,albert_park,ambrosio,Virgin,22,14.0,0.0,+4 Laps,0,0,,,,0.0,0.0,,,0,0
 2011,2,Malaysian Grand Prix,sepang,ambrosio,Virgin,22,20.0,0.0,Accident,0,1,14.0,,0.0,0.0,0.0,11.0,25.0,0,0
 2011,3,Chinese Grand Prix,shanghai,ambrosio,Virgin,21,20.0,0.0,+2 Laps,0,0,17.0,,0.5,0.0,0.0,14.0,50.0,0,0
@@ -505,8 +507,10 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,antonelli,Mercedes,14,15.0,0.0,Finished,0,0,3.3333333333333335,,0.17391304347826086,27.0,135.0,6.0,244.0,2,0
 2026,1,,albert_park,antonelli,mercedes,2,2.0,18.0,Finished,0,0,7.666666666666667,0.0,0.16666666666666666,,18.0,6.0,259.0,3,0
 2026,2,,shanghai,antonelli,mercedes,1,1.0,25.0,Finished,1,0,7.333333333333333,0.0,0.16,43.0,43.0,2.0,7.0,3,0
+2026,3,,suzuka,antonelli,mercedes,1,1.0,25.0,Finished,1,0,6.0,0.0,0.15384615384615385,43.0,68.0,1.0,0.0,3,0
 2026,1,,albert_park,arvid_lindblad,rb,9,8.0,4.0,Lapped,0,0,,,,,4.0,,,3,0
 2026,2,,shanghai,arvid_lindblad,rb,15,12.0,0.0,Lapped,0,0,8.0,,0.0,4.0,4.0,8.0,21.0,3,0
+2026,3,,suzuka,arvid_lindblad,rb,10,14.0,0.0,Finished,0,0,10.0,,0.0,5.0,4.0,10.0,39.0,3,0
 2010,1,Bahrain Grand Prix,bahrain,barrichello,Williams,11,10.0,1.0,Finished,0,0,,,,,1.0,,,0,0
 2010,2,Australian Grand Prix,albert_park,barrichello,Williams,8,8.0,4.0,Finished,0,0,10.0,,0.0,1.0,5.0,10.0,24.0,0,0
 2010,3,Malaysian Grand Prix,sepang,barrichello,Williams,7,12.0,0.0,+1 Lap,0,0,9.0,,0.0,2.5,5.0,11.0,32.0,0,0
@@ -574,6 +578,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,bearman,Haas F1 Team,11,12.0,0.0,Finished,0,0,11.666666666666666,,0.11538461538461539,3.6666666666666665,39.0,13.0,340.0,2,0
 2026,1,,albert_park,bearman,haas,12,7.0,6.0,Lapped,0,0,13.666666666666666,0.0,0.1111111111111111,,6.0,13.0,355.0,3,0
 2026,2,,shanghai,bearman,haas,10,5.0,10.0,Finished,0,0,12.666666666666666,0.0,0.10714285714285714,6.0,16.0,7.0,19.0,3,0
+2026,3,,suzuka,bearman,haas,18,22.0,0.0,Retired,0,1,8.0,0.0,0.10344827586206896,8.0,16.0,5.0,27.0,3,0
 2025,1,Australian Grand Prix,albert_park,bortoleto,Sauber,15,16.0,0.0,Retired,0,1,,,,1.3333333333333333,0.0,,,2,0
 2025,2,Chinese Grand Prix,shanghai,bortoleto,Sauber,19,14.0,0.0,Lapped,0,0,16.0,,1.0,3.3333333333333335,0.0,11.0,25.0,2,0
 2025,3,Japanese Grand Prix,suzuka,bortoleto,Sauber,17,19.0,0.0,Finished,0,0,15.0,,0.5,2.0,0.0,14.0,43.0,2,0
@@ -600,6 +605,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,bortoleto,Sauber,7,11.0,0.0,Finished,0,0,16.666666666666668,,0.21739130434782608,2.6666666666666665,19.0,19.0,360.0,2,0
 2026,1,,albert_park,bortoleto,audi,10,9.0,2.0,Lapped,0,0,13.666666666666666,0.0,0.20833333333333334,,2.0,19.0,375.0,3,0
 2026,2,,shanghai,bortoleto,audi,16,21.0,0.0,Did not start,0,1,11.0,0.0,0.2,2.0,2.0,9.0,23.0,3,0
+2026,3,,suzuka,bortoleto,audi,9,13.0,0.0,Finished,0,0,13.666666666666666,0.0,0.23076923076923078,1.0,2.0,12.0,41.0,3,0
 2013,1,Australian Grand Prix,albert_park,bottas,Williams,16,14.0,0.0,+1 Lap,0,0,,,,5.666666666666667,0.0,,,0,0
 2013,2,Malaysian Grand Prix,sepang,bottas,Williams,18,11.0,0.0,Finished,0,0,14.0,,0.0,1.0,0.0,11.0,25.0,0,0
 2013,3,Chinese Grand Prix,shanghai,bottas,Williams,16,13.0,0.0,Finished,0,0,12.5,,0.0,0.0,0.0,15.0,40.0,0,0
@@ -849,6 +855,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2024,24,Abu Dhabi Grand Prix,yas_marina,bottas,Sauber,9,20.0,0.0,Collision damage,0,1,14.0,0.09090909090909091,0.11788617886178862,1.3333333333333333,0.0,20.0,391.0,2,0
 2026,1,,albert_park,bottas,cadillac,19,19.0,0.0,Retired,0,1,16.333333333333332,0.1,0.1214574898785425,,0.0,19.0,399.0,3,0
 2026,2,,shanghai,bottas,cadillac,19,13.0,0.0,Lapped,0,0,16.666666666666668,0.0,0.125,0.0,0.0,11.0,25.0,3,0
+2026,3,,suzuka,bottas,cadillac,20,19.0,0.0,Lapped,0,0,17.333333333333332,0.1,0.12449799196787148,0.0,0.0,15.0,43.0,3,0
 2017,17,United States Grand Prix,americas,brendon_hartley,Toro Rosso,19,13.0,0.0,+1 Lap,0,0,,,,4.0,0.0,,,1,0
 2017,18,Mexican Grand Prix,rodriguez,brendon_hartley,Toro Rosso,17,20.0,0.0,Engine,0,1,13.0,,0.0,0.3333333333333333,0.0,19.0,331.0,1,0
 2017,19,Brazilian Grand Prix,interlagos,brendon_hartley,Toro Rosso,18,20.0,0.0,Engine,0,1,16.5,,0.5,0.3333333333333333,0.0,18.0,333.0,1,0
@@ -1170,6 +1177,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,colapinto,Alpine F1 Team,20,20.0,0.0,Lapped,0,0,14.666666666666666,0.0,0.15384615384615385,0.3333333333333333,0.0,20.0,379.0,2,0
 2026,1,,albert_park,colapinto,alpine,16,14.0,0.0,Lapped,0,0,16.333333333333332,,0.14814814814814814,,0.0,20.0,394.0,3,0
 2026,2,,shanghai,colapinto,alpine,12,10.0,1.0,Lapped,0,0,16.0,,0.14285714285714285,1.0,1.0,11.0,25.0,3,0
+2026,3,,suzuka,colapinto,alpine,15,16.0,0.0,Finished,0,0,14.666666666666666,,0.13793103448275862,5.0,1.0,14.0,42.0,3,0
 2022,16,Italian Grand Prix,monza,de_vries,Williams,8,9.0,2.0,Finished,0,0,,,,0.3333333333333333,2.0,,,2,0
 2023,1,Bahrain Grand Prix,bahrain,de_vries,AlphaTauri,19,14.0,0.0,+1 Lap,0,0,9.0,,0.0,0.0,0.0,19.0,317.0,2,0
 2023,2,Saudi Arabian Grand Prix,jeddah,de_vries,AlphaTauri,18,14.0,0.0,Finished,0,0,11.5,,0.0,0.0,0.0,11.0,25.0,2,0
@@ -1484,6 +1492,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,gasly,Alpine F1 Team,19,19.0,0.0,Lapped,0,0,13.0,0.0,0.15819209039548024,0.3333333333333333,20.0,18.0,359.0,2,0
 2026,1,,albert_park,gasly,alpine,14,10.0,1.0,Lapped,0,0,16.0,0.0,0.15730337078651685,,1.0,18.0,374.0,3,0
 2026,2,,shanghai,gasly,alpine,7,6.0,8.0,Finished,0,0,15.0,0.0,0.1564245810055866,1.0,9.0,10.0,24.0,3,0
+2026,3,,suzuka,gasly,alpine,7,7.0,6.0,Finished,0,0,11.666666666666666,0.0,0.15555555555555556,5.0,15.0,7.0,34.0,3,0
 2017,1,Australian Grand Prix,albert_park,giovinazzi,Sauber,16,12.0,0.0,+2 Laps,0,0,,,,0.6666666666666666,0.0,,,1,0
 2017,2,Chinese Grand Prix,shanghai,giovinazzi,Sauber,18,20.0,0.0,Accident,0,1,12.0,,0.0,0.6666666666666666,0.0,11.0,25.0,1,0
 2019,1,Australian Grand Prix,albert_park,giovinazzi,Alfa Romeo,14,15.0,0.0,+1 Lap,0,0,16.0,0.0,0.5,,0.0,13.0,43.0,1,0
@@ -1882,6 +1891,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,hadjar,RB F1 Team,9,17.0,0.0,Lapped,0,0,10.666666666666666,,0.13043478260869565,6.666666666666667,50.0,10.0,329.0,2,0
 2026,1,,albert_park,hadjar,red_bull,3,20.0,0.0,Retired,0,1,13.666666666666666,0.0,0.125,,0.0,12.0,344.0,3,0
 2026,2,,shanghai,hadjar,red_bull,9,8.0,4.0,Finished,0,0,18.333333333333332,0.0,0.16,8.0,4.0,11.0,25.0,3,0
+2026,3,,suzuka,hadjar,red_bull,8,12.0,0.0,Finished,0,0,15.0,0.0,0.15384615384615385,6.0,4.0,10.0,39.0,3,0
 2010,1,Bahrain Grand Prix,bahrain,hamilton,McLaren,4,3.0,15.0,Finished,0,0,,,,,15.0,,,0,0
 2010,2,Australian Grand Prix,albert_park,hamilton,McLaren,11,6.0,8.0,Finished,0,0,3.0,,0.0,21.0,23.0,3.0,10.0,0,0
 2010,3,Malaysian Grand Prix,sepang,hamilton,McLaren,20,6.0,8.0,Finished,0,0,4.5,,0.0,27.0,31.0,4.0,14.0,0,0
@@ -2212,6 +2222,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,hamilton,Ferrari,16,8.0,4.0,Finished,0,0,12.666666666666666,0.3333333333333333,0.09480122324159021,6.666666666666667,135.0,7.0,248.0,2,0
 2026,1,,albert_park,hamilton,ferrari,7,4.0,12.0,Finished,0,0,9.333333333333334,0.07142857142857142,0.09451219512195122,,12.0,6.0,259.0,3,0
 2026,2,,shanghai,hamilton,ferrari,3,3.0,15.0,Finished,0,0,8.0,0.4166666666666667,0.09422492401215805,27.0,27.0,4.0,13.0,3,0
+2026,3,,suzuka,hamilton,ferrari,6,6.0,8.0,Finished,0,0,5.0,0.2857142857142857,0.09393939393939393,27.0,35.0,3.0,16.0,3,0
 2016,1,Australian Grand Prix,albert_park,haryanto,Manor Marussia,22,20.0,0.0,Mechanical,0,1,,,,0.0,0.0,,,1,0
 2016,2,Bahrain Grand Prix,bahrain,haryanto,Manor Marussia,20,17.0,0.0,+1 Lap,0,0,20.0,,1.0,0.0,0.0,11.0,25.0,1,0
 2016,3,Chinese Grand Prix,shanghai,haryanto,Manor Marussia,20,21.0,0.0,+1 Lap,0,0,18.5,,0.5,0.0,0.0,14.0,50.0,1,0
@@ -2496,6 +2507,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,hulkenberg,Sauber,18,9.0,2.0,Finished,0,0,12.0,0.0,0.2015810276679842,2.6666666666666665,51.0,11.0,330.0,2,0
 2026,1,,albert_park,hulkenberg,audi,11,22.0,0.0,Did not start,0,1,12.0,0.0,0.20078740157480315,,0.0,10.0,343.0,3,0
 2026,2,,shanghai,hulkenberg,audi,11,11.0,0.0,Lapped,0,0,17.0,0.0,0.20392156862745098,2.0,0.0,11.0,25.0,3,0
+2026,3,,suzuka,hulkenberg,audi,13,11.0,0.0,Finished,0,0,14.0,0.0,0.203125,1.0,0.0,15.0,43.0,3,0
 2016,1,Australian Grand Prix,albert_park,jolyon_palmer,Renault,13,11.0,0.0,Finished,0,0,,,,0.3333333333333333,0.0,,,1,0
 2016,2,Bahrain Grand Prix,bahrain,jolyon_palmer,Renault,19,20.0,0.0,Hydraulics,0,1,11.0,,0.0,0.3333333333333333,0.0,11.0,25.0,1,0
 2016,3,Chinese Grand Prix,shanghai,jolyon_palmer,Renault,19,22.0,0.0,+1 Lap,0,0,15.5,,0.5,0.3333333333333333,0.0,14.0,50.0,1,0
@@ -3171,6 +3183,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,lawson,RB F1 Team,13,18.0,0.0,Lapped,0,0,10.0,0.0,0.17647058823529413,6.666666666666667,38.0,14.0,341.0,2,0
 2026,1,,albert_park,lawson,rb,8,13.0,0.0,Lapped,0,0,13.666666666666666,0.0,0.17142857142857143,,0.0,14.0,356.0,3,0
 2026,2,,shanghai,lawson,rb,14,7.0,6.0,Finished,0,0,13.333333333333334,0.0,0.16666666666666666,4.0,6.0,11.0,25.0,3,0
+2026,3,,suzuka,lawson,rb,14,9.0,2.0,Finished,0,0,12.666666666666666,0.0,0.16216216216216217,5.0,8.0,9.0,37.0,3,0
 2018,1,Australian Grand Prix,albert_park,leclerc,Sauber,18,13.0,0.0,Finished,0,0,,,,0.0,0.0,,,1,0
 2018,2,Bahrain Grand Prix,bahrain,leclerc,Sauber,19,12.0,0.0,+1 Lap,0,0,13.0,,0.0,0.0,0.0,11.0,25.0,1,0
 2018,3,Chinese Grand Prix,shanghai,leclerc,Sauber,19,19.0,0.0,Finished,0,0,12.5,,0.0,0.6666666666666666,0.0,15.0,50.0,1,0
@@ -3346,6 +3359,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,leclerc,Ferrari,5,4.0,12.0,Finished,0,0,10.333333333333334,0.0,0.1569767441860465,6.666666666666667,225.0,5.0,166.0,2,0
 2026,1,,albert_park,leclerc,ferrari,4,3.0,15.0,Finished,0,0,5.333333333333333,0.16666666666666666,0.15606936416184972,,15.0,5.0,169.0,3,0
 2026,2,,shanghai,leclerc,ferrari,4,4.0,12.0,Finished,0,0,5.0,0.0,0.15517241379310345,27.0,27.0,3.0,10.0,3,0
+2026,3,,suzuka,leclerc,ferrari,4,3.0,15.0,Finished,0,0,3.6666666666666665,0.0,0.15428571428571428,27.0,42.0,3.0,16.0,3,0
 2010,1,Bahrain Grand Prix,bahrain,liuzzi,Force India,12,9.0,2.0,Finished,0,0,,,,,2.0,,,0,0
 2010,2,Australian Grand Prix,albert_park,liuzzi,Force India,13,7.0,6.0,Finished,0,0,9.0,,0.0,2.0,8.0,9.0,23.0,0,0
 2010,3,Malaysian Grand Prix,sepang,liuzzi,Force India,10,20.0,0.0,Throttle,0,1,8.0,,0.0,4.0,8.0,9.0,29.0,0,0
@@ -3870,6 +3884,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,max_verstappen,Red Bull,1,1.0,25.0,Finished,1,0,1.6666666666666667,0.4,0.14224137931034483,22.0,389.0,2.0,15.0,2,0
 2026,1,,albert_park,max_verstappen,red_bull,20,6.0,8.0,Finished,0,0,1.0,0.1111111111111111,0.14163090128755365,,8.0,2.0,5.0,3,0
 2026,2,,shanghai,max_verstappen,red_bull,8,16.0,0.0,Retired,0,1,2.6666666666666665,0.14285714285714285,0.14102564102564102,8.0,8.0,6.0,17.0,3,0
+2026,3,,suzuka,max_verstappen,red_bull,11,8.0,4.0,Finished,0,0,7.666666666666667,0.4444444444444444,0.14468085106382977,6.0,12.0,8.0,35.0,3,0
 2021,1,Bahrain Grand Prix,bahrain,mazepin,Haas F1 Team,19,20.0,0.0,Accident,0,1,,,,0.0,0.0,,,1,0
 2021,2,Emilia Romagna Grand Prix,imola,mazepin,Haas F1 Team,19,17.0,0.0,+2 Laps,0,0,20.0,,1.0,0.0,0.0,11.0,25.0,1,0
 2021,3,Portuguese Grand Prix,portimao,mazepin,Haas F1 Team,20,19.0,0.0,+2 Laps,0,0,18.5,,0.5,0.0,0.0,14.0,44.0,1,0
@@ -4201,6 +4216,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,norris,McLaren,2,3.0,15.0,Finished,0,0,8.0,0.16666666666666666,0.09933774834437085,21.666666666666668,394.0,1.0,0.0,2,0
 2026,1,,albert_park,norris,mclaren,6,5.0,10.0,Finished,0,0,8.666666666666666,0.2,0.09868421052631579,,10.0,1.0,0.0,3,0
 2026,2,,shanghai,norris,mclaren,6,20.0,0.0,Did not start,0,1,4.0,0.0,0.09803921568627451,10.0,10.0,5.0,15.0,3,0
+2026,3,,suzuka,norris,mclaren,5,5.0,10.0,Finished,0,0,9.333333333333334,0.0,0.1038961038961039,5.0,20.0,6.0,33.0,3,0
 2016,13,Belgian Grand Prix,spa,ocon,Manor Marussia,17,16.0,0.0,+1 Lap,0,0,,,,0.0,0.0,,,1,0
 2016,14,Italian Grand Prix,monza,ocon,Manor Marussia,22,18.0,0.0,+2 Laps,0,0,16.0,,0.0,0.0,0.0,18.0,232.0,1,0
 2016,15,Singapore Grand Prix,marina_bay,ocon,Manor Marussia,21,18.0,0.0,+2 Laps,0,0,17.0,,0.0,0.0,0.0,18.0,250.0,1,0
@@ -4383,6 +4399,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,ocon,Haas F1 Team,8,7.0,6.0,Finished,0,0,12.0,0.0,0.1452513966480447,3.6666666666666665,34.0,15.0,351.0,2,0
 2026,1,,albert_park,ocon,haas,13,11.0,0.0,Lapped,0,0,10.333333333333334,0.0,0.14444444444444443,,0.0,15.0,360.0,3,0
 2026,2,,shanghai,ocon,haas,13,14.0,0.0,Lapped,0,0,11.0,0.0,0.143646408839779,6.0,0.0,11.0,25.0,3,0
+2026,3,,suzuka,ocon,haas,12,10.0,1.0,Finished,0,0,10.666666666666666,0.0,0.14285714285714285,8.0,1.0,15.0,43.0,3,0
 2011,1,Australian Grand Prix,albert_park,perez,Sauber,13,20.0,0.0,Disqualified,0,1,,,,2.3333333333333335,0.0,,,0,0
 2011,2,Malaysian Grand Prix,sepang,perez,Sauber,16,20.0,0.0,Accident,0,1,20.0,,1.0,0.3333333333333333,0.0,11.0,25.0,0,0
 2011,3,Chinese Grand Prix,shanghai,perez,Sauber,12,17.0,0.0,+1 Lap,0,0,20.0,,1.0,2.0,0.0,14.0,50.0,0,0
@@ -4668,6 +4685,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2024,24,Abu Dhabi Grand Prix,yas_marina,perez,Red Bull,10,20.0,0.0,Collision,0,1,13.666666666666666,0.0,0.14184397163120568,20.666666666666668,138.0,8.0,253.0,2,0
 2026,1,,albert_park,perez,cadillac,18,16.0,0.0,Lapped,0,0,16.666666666666668,0.0,0.14487632508833923,,0.0,8.0,261.0,3,0
 2026,2,,shanghai,perez,cadillac,21,15.0,0.0,Lapped,0,0,18.666666666666668,0.0,0.1443661971830986,0.0,0.0,11.0,25.0,3,0
+2026,3,,suzuka,perez,cadillac,19,17.0,0.0,Finished,0,0,17.0,0.0,0.14385964912280702,0.0,0.0,15.0,43.0,3,0
 2010,1,Bahrain Grand Prix,bahrain,petrov,Renault,17,20.0,0.0,Suspension,0,1,,,,,0.0,,,0,0
 2010,2,Australian Grand Prix,albert_park,petrov,Renault,18,20.0,0.0,Spun off,0,1,20.0,,1.0,0.0,0.0,11.0,25.0,0,0
 2010,3,Malaysian Grand Prix,sepang,petrov,Renault,11,20.0,0.0,Gearbox,0,1,20.0,,1.0,9.0,0.0,12.0,37.0,0,0
@@ -4798,6 +4816,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,piastri,McLaren,3,2.0,18.0,Finished,0,0,9.0,0.0,0.07246376811594203,21.666666666666668,381.0,3.0,16.0,2,0
 2026,1,,albert_park,piastri,mclaren,5,21.0,0.0,Did not start,0,1,8.0,0.0,0.07142857142857142,,0.0,3.0,13.0,3,0
 2026,2,,shanghai,piastri,mclaren,5,19.0,0.0,Did not start,0,1,8.333333333333334,0.5,0.08450704225352113,10.0,0.0,11.0,25.0,3,0
+2026,3,,suzuka,piastri,mclaren,3,2.0,18.0,Finished,0,0,14.0,0.0,0.09722222222222222,5.0,18.0,15.0,43.0,3,0
 2012,1,Australian Grand Prix,albert_park,pic,Marussia,21,15.0,0.0,+5 Laps,0,0,,,,,0.0,,,0,0
 2012,2,Malaysian Grand Prix,sepang,pic,Marussia,21,20.0,0.0,+2 Laps,0,0,15.0,,0.0,0.0,0.0,11.0,25.0,0,0
 2012,3,Chinese Grand Prix,shanghai,pic,Marussia,21,20.0,0.0,+1 Lap,0,0,17.5,,0.0,0.0,0.0,15.0,35.0,0,0
@@ -5680,6 +5699,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,russell,Mercedes,4,5.0,10.0,Finished,0,0,4.0,0.0,0.13245033112582782,27.0,289.0,4.0,100.0,2,0
 2026,1,,albert_park,russell,mercedes,1,1.0,25.0,Finished,1,0,4.333333333333333,0.0,0.13157894736842105,,25.0,4.0,105.0,3,0
 2026,2,,shanghai,russell,mercedes,2,2.0,18.0,Finished,0,0,4.0,0.0,0.13071895424836602,43.0,43.0,1.0,0.0,3,0
+2026,3,,suzuka,russell,mercedes,2,4.0,12.0,Finished,0,0,2.6666666666666665,0.0,0.12987012987012986,43.0,55.0,1.0,0.0,3,0
 2015,1,Australian Grand Prix,albert_park,sainz,Toro Rosso,7,9.0,2.0,+1 Lap,0,0,,,,0.3333333333333333,2.0,,,1,0
 2015,2,Malaysian Grand Prix,sepang,sainz,Toro Rosso,15,8.0,4.0,+1 Lap,0,0,9.0,,0.0,0.6666666666666666,6.0,9.0,23.0,1,0
 2015,3,Chinese Grand Prix,shanghai,sainz,Toro Rosso,14,13.0,0.0,+1 Lap,0,0,8.5,,0.0,4.0,6.0,9.0,37.0,1,0
@@ -5914,6 +5934,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,sainz,Williams,12,13.0,0.0,Finished,0,0,7.0,0.0,0.19480519480519481,8.333333333333334,54.0,9.0,325.0,2,0
 2026,1,,albert_park,sainz,williams,21,15.0,0.0,Lapped,0,0,7.0,0.1111111111111111,0.1939655172413793,,0.0,9.0,340.0,3,0
 2026,2,,shanghai,sainz,williams,17,9.0,2.0,Lapped,0,0,10.333333333333334,0.0,0.19313304721030042,0.0,2.0,11.0,25.0,3,0
+2026,3,,suzuka,sainz,williams,16,15.0,0.0,Finished,0,0,12.333333333333334,0.0,0.19230769230769232,1.0,2.0,12.0,41.0,3,0
 2023,1,Bahrain Grand Prix,bahrain,sargeant,Williams,16,12.0,0.0,+1 Lap,0,0,,,,0.0,0.0,,,2,0
 2023,2,Saudi Arabian Grand Prix,jeddah,sargeant,Williams,20,16.0,0.0,Finished,0,0,12.0,,0.0,0.3333333333333333,0.0,11.0,25.0,2,0
 2023,3,Australian Grand Prix,albert_park,sargeant,Williams,18,16.0,0.0,Collision,0,1,14.0,,0.0,0.3333333333333333,0.0,14.0,44.0,2,0
@@ -6183,6 +6204,7 @@ season,round,race_name,circuit,driver,team,grid,position,points,status,won,dnf,d
 2025,24,Abu Dhabi Grand Prix,yas_marina,stroll,Aston Martin,15,10.0,1.0,Finished,0,0,17.0,0.0,0.1736842105263158,2.0,29.0,15.0,351.0,2,0
 2026,1,,albert_park,stroll,aston_martin,22,17.0,0.0,Lapped,0,0,15.0,0.0,0.17277486910994763,,0.0,16.0,365.0,3,0
 2026,2,,shanghai,stroll,aston_martin,20,18.0,0.0,Retired,0,1,14.666666666666666,0.0,0.171875,0.0,0.0,11.0,25.0,3,0
+2026,3,,suzuka,stroll,aston_martin,22,21.0,0.0,Retired,0,1,15.0,0.0,0.17616580310880828,0.0,0.0,15.0,43.0,3,0
 2010,1,Bahrain Grand Prix,bahrain,sutil,Force India,10,12.0,0.0,Finished,0,0,,,,,0.0,,,0,0
 2010,2,Australian Grand Prix,albert_park,sutil,Force India,10,20.0,0.0,Engine,0,1,12.0,,0.0,2.0,0.0,11.0,25.0,0,0
 2010,3,Malaysian Grand Prix,sepang,sutil,Force India,4,5.0,10.0,Finished,0,0,16.0,,0.5,4.0,10.0,12.0,37.0,0,0
