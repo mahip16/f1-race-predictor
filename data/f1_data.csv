@@ -7002,3 +7002,25 @@ season,round,race_name,circuit,driver,team,grid,position,points,status
 2026,4,,miami,lawson,rb,11,20,0.0,Retired
 2026,4,,miami,gasly,alpine,9,21,0.0,Retired
 2026,4,,miami,hadjar,red_bull,22,22,0.0,Retired
+2026,5,,villeneuve,antonelli,mercedes,2,1,25.0,Finished
+2026,5,,villeneuve,hamilton,ferrari,5,2,18.0,Finished
+2026,5,,villeneuve,max_verstappen,red_bull,6,3,15.0,Finished
+2026,5,,villeneuve,leclerc,ferrari,8,4,12.0,Finished
+2026,5,,villeneuve,hadjar,red_bull,7,5,10.0,Lapped
+2026,5,,villeneuve,colapinto,alpine,10,6,8.0,Lapped
+2026,5,,villeneuve,lawson,rb,12,7,6.0,Lapped
+2026,5,,villeneuve,gasly,alpine,14,8,4.0,Lapped
+2026,5,,villeneuve,sainz,williams,15,9,2.0,Lapped
+2026,5,,villeneuve,bearman,haas,16,10,1.0,Lapped
+2026,5,,villeneuve,piastri,mclaren,4,11,0.0,Lapped
+2026,5,,villeneuve,hulkenberg,audi,11,12,0.0,Lapped
+2026,5,,villeneuve,bortoleto,audi,13,13,0.0,Lapped
+2026,5,,villeneuve,ocon,haas,17,14,0.0,Lapped
+2026,5,,villeneuve,stroll,aston_martin,22,15,0.0,Lapped
+2026,5,,villeneuve,bottas,cadillac,21,16,0.0,Lapped
+2026,5,,villeneuve,perez,cadillac,20,17,0.0,Retired
+2026,5,,villeneuve,norris,mclaren,3,18,0.0,Retired
+2026,5,,villeneuve,russell,mercedes,1,19,0.0,Retired
+2026,5,,villeneuve,alonso,aston_martin,19,20,0.0,Retired
+2026,5,,villeneuve,albon,williams,18,21,0.0,Retired
+2026,5,,villeneuve,arvid_lindblad,rb,9,22,0.0,Did not start
